@@ -1,0 +1,66 @@
+@import "variables";
+@import "bootstrap";
+
+.secondary-font-headers {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $secondary-font;
+  }
+}
+
+.btn-buy {
+  display: block;
+  background: $orange;
+  font-family: $secondary-font;
+  font-size: $font-size-h2;
+  padding: 1rem;
+  text-align: center;
+}
+
+.btn-buy .btn-buy-subtext {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+}
+
+.home {
+  color: white;
+    a { text-decoration: none;
+    &:link, &:visited {
+    color: $light-yellow;
+    }
+  }
+}
+
+.faded-blue {
+  color: $faded-blue;
+}
+
+.orange {
+  color: $orange;
+}
+
+.light-yellow {
+  color: $light-yellow;
+}
+
+.logo {
+  color: $orange;
+  font-family: $secondary-font;
+  font-size: 230px;
+  font-size: 23rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.black-bar {
+  color: white;
+  background: black;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.center {
+  text-align: center;
+}
+
