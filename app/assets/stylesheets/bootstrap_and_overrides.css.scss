@@ -9,7 +9,6 @@ body {
   padding-top: 70px;
 }
 
-
 .faded-blue {
   color: $faded-blue;
 }
@@ -33,6 +32,10 @@ body {
 
 .center {
   text-align: center;
+}
+
+p, .small, td, .navbar-form, .navbar-form button, .navbar-nav li a, .dropdown-menu li a {
+  font-weight: $light;
 }
 
 // Navigation
@@ -83,4 +86,6 @@ body {
 .btn-buy .btn-buy-subtext {
   font-family: $font-family-base;
   font-size: $font-size-base;
+  text-transform: none;
+  letter-spacing: 0px;
 }
