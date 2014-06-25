@@ -32,16 +32,16 @@
 
 <p>
   <strong>Data heavy:</strong>
-  <%= @entry.data_heavy %>
+  <%= @entry.data_heavy.yesno.capitalize %>
 </p>
 
 <p>
   <strong>Forecast:</strong>
-  <%= @entry.forecast %>
+  <%= @entry.forecast.yesno.capitalize %>
 </p>
 
 <p>
-  <strong>Url:</strong>
+  <strong>URL:</strong>
   <%= @entry.url %>
 </p>
 
