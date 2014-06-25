@@ -1,34 +1,14 @@
 @import "variables";
 @import "bootstrap";
 
-.secondary-font-headers {
-  h1, h2, h3, h4, h5, h6 {
-    font-family: $secondary-font;
-  }
+
+// Universal
+//
+
+body {
+  padding-top: 70px;
 }
 
-.btn-buy {
-  display: block;
-  background: $orange;
-  font-family: $secondary-font;
-  font-size: $font-size-h2;
-  padding: 1rem;
-  text-align: center;
-}
-
-.btn-buy .btn-buy-subtext {
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-}
-
-.home {
-  color: white;
-    a { text-decoration: none;
-    &:link, &:visited {
-    color: $light-yellow;
-    }
-  }
-}
 
 .faded-blue {
   color: $faded-blue;
@@ -40,15 +20,6 @@
 
 .light-yellow {
   color: $light-yellow;
-}
-
-.logo {
-  color: $orange;
-  font-family: $secondary-font;
-  font-size: 230px;
-  font-size: 23rem;
-  line-height: 1;
-  text-align: center;
 }
 
 .black-bar {
@@ -64,3 +35,52 @@
   text-align: center;
 }
 
+// Navigation
+//
+
+.navbar-brand {
+  color: $faded-blue !important;
+  font-family: $secondary-font;
+  font-weight: $blackletter;
+  letter-spacing: 1px;
+}
+
+// Home page
+//
+
+.home {
+  color: white;
+    a { text-decoration: none;
+    &:link, &:visited {
+    color: $light-yellow;
+    }
+  }
+}
+
+.logo {
+  color: $faded-blue;
+  font-family: $secondary-font;
+  font-size: 600px;
+  font-size: 60rem;
+  line-height: 1;
+  text-align: center;
+  font-weight: $blackletter;
+  letter-spacing: 4px;
+}
+
+.btn-buy {
+  display: block;
+  background: $orange;
+  font-family: $secondary-font;
+  font-size: $font-size-h2;
+  padding: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: $blackletter;
+  letter-spacing: 2px;
+}
+
+.btn-buy .btn-buy-subtext {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+}

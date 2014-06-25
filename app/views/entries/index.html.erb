@@ -1,0 +1,44 @@
+<h1>Entries</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Comments</th>
+      <th>Publication date</th>
+      <th>Pages</th>
+      <th>Data Heavy?</th>
+      <th>Forecast?</th>
+      <th>URL</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @entries.each do |entry| %>
+      <tr>
+        <td><%= entry.title %></td>
+        <td><%= entry.author %></td>
+        <td><%= entry.comments %></td>
+        <td><%= entry.publication_date %></td>
+        <td><%= entry.pages %></td>
+        <td><%= entry.data_heavy %></td>
+        <td><%= entry.forecast %></td>
+        <td><%= entry.url %></td>
+        <td><%= link_to 'Show', entry %></td>
+        <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
+        <td><%= link_to entry, method: :delete, data: { confirm: 'Are you sure?' } do %>
+  <span class="glyphicon glyphicon-trash"></span>
+<% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to new_entry_path do %>
+  <span class="glyphicon glyphicon-plus"></span>  Add New Entry
+<% end %>

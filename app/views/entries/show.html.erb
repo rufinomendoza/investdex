@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @entry.title %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @entry.author %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @entry.comments %>
+</p>
+
+<p>
+  <strong>Publication date:</strong>
+  <%= @entry.publication_date %>
+</p>
+
+<p>
+  <strong>Pages:</strong>
+  <%= @entry.pages %>
+</p>
+
+<p>
+  <strong>Data heavy:</strong>
+  <%= @entry.data_heavy %>
+</p>
+
+<p>
+  <strong>Forecast:</strong>
+  <%= @entry.forecast %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @entry.url %>
+</p>
+
+<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<%= link_to 'Back', entries_path %>

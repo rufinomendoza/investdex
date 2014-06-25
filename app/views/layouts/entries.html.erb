@@ -1,0 +1,8 @@
+
+<% content_for :content do %>
+  <%= render template: "layouts/_navbar" %>
+  <div class="container">
+    <%= content_for?(:entries_content) ? yield(:entries_content) : yield %>
+  </div>
+<% end %>
+<%= render template: "layouts/application" %>
