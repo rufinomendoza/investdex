@@ -43,3 +43,5 @@ gem 'spring',        group: :development
 gem 'bootstrap-sass'
 
 gem 'haml'
+
+gem 'tzinfo-data'
