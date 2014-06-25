@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
+puts "Generating categories"
 categories = [
   "Industry Primers / Overviews",
   "Industry Trends & Research",
@@ -18,3 +19,4 @@ categories = [
 categories.each do |category|
   Category.create( { name: category } )
 end
+puts "Categories generated"
