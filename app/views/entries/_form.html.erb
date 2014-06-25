@@ -32,6 +32,10 @@
     <%= f.number_field :pages %>
   </div>
   <div class="field">
+    <%= f.label :category %><br>
+    <%= f.collection_select :category_id, Category.all, :id, :name %>
+  </div>
+  <div class="field">
     <%= f.label :data_heavy %><br>
     <%= f.check_box :data_heavy %>
   </div>

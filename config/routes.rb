@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :categories
+
   resources :entries
 
   get 'static_pages/home'
