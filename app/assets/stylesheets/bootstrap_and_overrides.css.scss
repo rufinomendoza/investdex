@@ -97,33 +97,25 @@ p, .small, td, .navbar-form, .navbar-form button, .navbar-nav li a, .dropdown-me
 // Flash alerts for Devise
 //
 .alert-error {
-    background-color: #f2dede;
-    border-color: #eed3d7;
-    color: #b94a48;
-    text-align: left;
-    list-style-type: none;
+    background-color: $state-danger-bg;
+    border-color: $state-danger-border;
+    color: $state-danger-text;
  }
 
 .alert-alert {
-    background-color: #f2dede;
-    border-color: #eed3d7;
-    color: #b94a48;
-    text-align: left;
-    list-style-type: none;
+    background-color: $state-warning-bg;
+    border-color: $state-warning-border;
+    color: $state-warning-text;
  }
 
 .alert-success {
-    background-color: #dff0d8;
-    border-color: #d6e9c6;
-    color: #468847;
-    text-align: left;
-    list-style-type: none;
+    background-color: $state-success-bg;
+    border-color: $state-success-border;
+    color: $state-success-text;
  }
 
 .alert-notice {
-    background-color: #dff0d8;
-    border-color: #d6e9c6;
-    color: #468847;
-    text-align: left;
-    list-style-type: none;
+    background-color: $state-info-bg;
+    border-color: $state-info-border;
+    color: $state-info-text;
  }
