@@ -1,6 +1,6 @@
 <%= render "entries/navbar" %>
 
-<h1>Entries</h1>
+<h1>The InvestDEX</h1>
 
 <div class="table-responsive">
   <table class="table table-hover">
@@ -50,5 +50,14 @@
     <span class="glyphicon glyphicon-plus"></span>  Add New Entry
   <% end %>
 </p>
+
+<hr>
+<h4>Bookmarklet</h4>
+<div class="col-md-6 col-md-offset-3">
+<center>
+  <a href="javascript:m='http://localhost:3000/entries/new/';w=window.open(m,'addwindow','status=no,toolbar=no,width=1024,height=768,resizable=yes');setTimeout(function(){w.focus();},250);document.getElementById('entry_title').value='test';document.getElementById('entry_url').value='url';" class="btn btn-primary" disabled="disabled">Add to InvestDEX</a>
+  <p><small>This is currently under development. Eventually, you will be able drag this to your bookmarks bar and click it to add any page you are visiting to InvestDEX.</small></p>
+</center>
+</div>
 
 <%= render "convert" %>
