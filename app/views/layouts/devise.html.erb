@@ -1,5 +1,5 @@
-<%= render "layouts/navbar" %>
 <% content_for :content do %>
+<%= render "layouts/navbar" %>
   <div class="container">
     <%= content_for?(:devise_content) ? yield(:devise_content) : yield %>
   </div>
