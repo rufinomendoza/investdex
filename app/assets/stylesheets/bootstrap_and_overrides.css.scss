@@ -93,3 +93,37 @@ p, .small, td, .navbar-form, .navbar-form button, .navbar-nav li a, .dropdown-me
   text-transform: none;
   letter-spacing: 0px;
 }
+
+// Flash alerts for Devise
+//
+.alert-error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+    list-style-type: none;
+ }
+
+.alert-alert {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+    list-style-type: none;
+ }
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+    list-style-type: none;
+ }
+
+.alert-notice {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+    list-style-type: none;
+ }

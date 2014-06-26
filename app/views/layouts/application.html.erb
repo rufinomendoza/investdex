@@ -9,6 +9,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="container">
+    <%= render 'layouts/messages' %>
+  </div>
   <%= content_for?(:content) ? yield(:content) : yield %>
 </body>
 </html>
