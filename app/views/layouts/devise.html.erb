@@ -1,7 +1,7 @@
 <%= render "layouts/navbar" %>
 <% content_for :content do %>
   <div class="container">
-    <%= content_for?(:entries_content) ? yield(:entries_content) : yield %>
+    <%= content_for?(:devise_content) ? yield(:devise_content) : yield %>
   </div>
 <% end %>
 <%= render template: "layouts/application" %>

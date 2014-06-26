@@ -45,3 +45,5 @@ gem 'bootstrap-sass'
 gem 'haml'
 
 gem 'tzinfo-data'
+
+gem 'devise'

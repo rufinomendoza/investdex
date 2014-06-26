@@ -17,6 +17,10 @@
   color: $light-yellow;
 }
 
+.black {
+  color: black;
+}
+
 .black-bar {
   color: white;
   background: black;
@@ -61,16 +65,18 @@ p, .small, td, .navbar-form, .navbar-form button, .navbar-nav li a, .dropdown-me
 .logo {
   color: $faded-blue;
   font-family: $secondary-font;
-  font-size: 600px;
-  font-size: 60rem;
   line-height: 1;
-  text-align: center;
   font-weight: $blackletter;
-  letter-spacing: 4px;
+  text-transform: uppercase;
+  .logo-large {
+    font-size: 300px;
+    font-size: 30rem;
+    text-align: center;
+    letter-spacing: 4px;
+  }
 }
 
 .btn-buy {
-  display: block;
   background: $orange;
   font-family: $secondary-font;
   font-size: $font-size-h2;
