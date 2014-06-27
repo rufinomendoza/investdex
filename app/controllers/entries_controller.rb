@@ -1,10 +1,10 @@
 class EntriesController < ApplicationController
   before_action :set_entry, only: [:show, :edit, :update, :destroy]
-
+  helper_method :sort_column, :sort_direction
   # GET /entries
   # GET /entries.json
   def index
-    @entries = Entry.all
+    @entries = Entry.order(sort_column + ' ' + sort_direction)
   end
 
   # GET /entries/1
@@ -70,5 +70,13 @@ class EntriesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def entry_params
       params.require(:entry).permit(:title, :author, :comments, :publication_date, :pages, :data_heavy, :forecast, :url, :category_id)
+    end
+
+    def sort_column
+      Entry.column_names.include?(params[:sort]) ? params[:sort] : "title"
+    end
+    
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ?  params[:direction] : "asc"
     end
 end

@@ -1,0 +1,6 @@
+%h4 Bookmarklet
+.col-md-6.col-md-offset-3
+  %center
+    = link_to "Add to InvestDEX", "javascript:m='http://localhost:3000/entries/new/';w=window.open(m,'addwindow','status=no,toolbar=no,width=1024,height=768,resizable=yes');setTimeout(function(){w.focus();},250);document.getElementById('entry_title').value='test';document.getElementById('entry_url').value='url';", class: "btn btn-primary", disabled: "disabled"
+    %p
+      %small This is currently under development. Eventually, you will be able drag this to your bookmarks bar and click it to add any page you are visiting to InvestDEX.

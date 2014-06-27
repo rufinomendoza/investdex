@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140625210342) do
+ActiveRecord::Schema.define(version: 20140627014745) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20140625210342) do
     t.string   "author"
     t.text     "comments"
     t.datetime "publication_date"
-    t.integer  "pages"
+    t.integer  "pages",            default: 1
     t.boolean  "data_heavy"
     t.boolean  "forecast"
     t.string   "url"

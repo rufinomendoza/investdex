@@ -1,0 +1,55 @@
+.table-responsive
+  %table.table.table-hover
+    %thead
+      %tr
+        %th
+          Title
+          = sortable "title"
+        %th
+          Author
+          = sortable "author"
+        %th
+          Comments
+          = sortable "comments"
+        %th
+          Publication Date
+          = sortable "publication_date"
+        %th
+          Pages
+          = sortable "pages"
+        %th
+          Category
+          = sortable "category_id"
+        %th
+          Data heavy
+          = sortable "data_heavy"
+        %th
+          Forecast
+          = sortable "forecast"
+        %th
+          URL
+          = sortable "url"
+        %th{colspan:"3"}
+    %tbody
+      - @entries.each do |entry|
+        %tr
+          %td= entry.title
+          %td= entry.author
+          %td= entry.comments
+          %td= entry.publication_date
+          %td= entry.pages
+          %td= entry.category.name
+          %td= entry.data_heavy.yesno.capitalize
+          %td= entry.forecast.yesno.capitalize
+          %td= entry.url
+          %td= link_to 'Show', entry
+          %td= link_to 'Edit', edit_entry_path(entry)
+          %td
+            = link_to entry, method: :delete, data: { confirm: 'Are you sure?' } do
+              %span{class:"glyphicon glyphicon-trash"}
+%br
+
+%p
+  = link_to new_entry_path do
+    %span{class: "glyphicon glyphicon-plus"}
+    Add New Entry
