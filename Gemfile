@@ -46,3 +46,6 @@ gem 'haml'
 gem 'tzinfo-data'
 
 gem 'devise'
+
+gem 'pg_search'
+# gem 'texticle', require: 'texticle/rails'

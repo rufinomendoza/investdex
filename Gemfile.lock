@@ -29,6 +29,7 @@ GEM
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.7)
+    bcrypt (3.1.7-x86-mingw32)
     bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
     builder (3.2.2)
@@ -67,6 +68,10 @@ GEM
     orm_adapter (0.5.0)
     pg (0.16.0)
     pg (0.16.0-x86-mingw32)
+    pg_search (0.7.4)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
+      arel
     polyglot (0.3.5)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -138,6 +143,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   pg
+  pg_search
   rails (= 4.1.0)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

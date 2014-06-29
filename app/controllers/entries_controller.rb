@@ -4,7 +4,8 @@ class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.json
   def index
-    @entries = Entry.order(sort_column + ' ' + sort_direction)
+    # @entries = Entry.order(sort_column + ' ' + sort_direction)
+    @entries = Entry.text_search(params[:query])
   end
 
   # GET /entries/1
