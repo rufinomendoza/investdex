@@ -8,18 +8,15 @@ class Entry < ActiveRecord::Base
   pg_search_scope :search, against: [:title, :author, :comments],
                   using: {tsearch: {dictionary: "english"}},
                   associated_against:{category: :name}
+  multisearchable against: [:title, :author, :comments]
 
-  def category_name
-    category.name
-  end
-
-  def self.text_search(query)
-    if query.present?
-      search(query)
-    else
-      all
-    end
-  end
+  # def self.text_search(query)
+  #   if query.present?
+  #     PgSearch.multisearch(query)
+  #   else
+  #     all
+  #   end
+  # end
 
 
 end
