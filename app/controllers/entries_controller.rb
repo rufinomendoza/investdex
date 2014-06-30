@@ -4,8 +4,8 @@ class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.json
   def index
-    @entries = Entry.order(sort_column + ' ' + sort_direction)
-    # @entries = Entry.text_search(params[:query])
+    # @entries = Entry.order(sort_column + ' ' + sort_direction)
+    @entries = Entry.text_search(params[:query]).reorder("publication_date DESC")
     @pg_search_documents = PgSearch.multisearch(params[:query])
     @pg_categories = @pg_search_documents.where(searchable_type: "Category")
     @pg_entries = @pg_search_documents.where(searchable_type: "Entry")

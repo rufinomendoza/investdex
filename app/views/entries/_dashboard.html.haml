@@ -1,6 +1,7 @@
 %hr
 
 - if @pg_search_documents.present?
+  %h3 Search results by relevance
 
   - if @pg_categories.present?
     %h4= "We have found #{pluralize(@pg_categories.count(:all), 'matching category')}."
@@ -38,7 +39,7 @@
         %tbody
           - @pg_entries.each do |entry|
             %tr
-              %td= link_to entry.searchable.title, entry.searchable
+              %td= entry.searchable.title
               %td= entry.searchable.author
               %td= entry.searchable.comments
               %td= entry.searchable.publication_date
@@ -53,50 +54,50 @@
                 = link_to entry.searchable, method: :delete, data: { confirm: 'Are you sure?' } do
                   %span{class:"glyphicon glyphicon-trash"}
   - else
-    %h4 There are no categories that match your result.
+    %h4 There are no search results.
 
-- else
-  %p There are no search results. This is the full InvestDEX below instead:
-  .table-responsive
-    %table.table.table-hover
-      %thead
+%hr
+%h3 Search results by date
+.table-responsive
+  %table.table.table-hover
+    %thead
+      %tr
+        %th
+          Title
+        %th
+          Author
+        %th
+          Comments
+        %th
+          Publication Date
+        %th
+          Pages
+        %th
+          Category
+        %th
+          Data heavy
+        %th
+          Forecast
+        %th
+          URL
+        %th{colspan:"3"}
+    %tbody
+      - @entries.each do |entry|
         %tr
-          %th
-            Title
-          %th
-            Author
-          %th
-            Comments
-          %th
-            Publication Date
-          %th
-            Pages
-          %th
-            Category
-          %th
-            Data heavy
-          %th
-            Forecast
-          %th
-            URL
-          %th{colspan:"3"}
-      %tbody
-        - @entries.each do |entry|
-          %tr
-            %td= entry.title
-            %td= entry.author
-            %td= entry.comments
-            %td= entry.publication_date
-            %td= entry.pages
-            %td= entry.category.name
-            %td= entry.data_heavy.yesno.capitalize
-            %td= entry.forecast.yesno.capitalize
-            %td= entry.url
-            %td= link_to 'Show', entry
-            %td= link_to 'Edit', edit_entry_path(entry)
-            %td
-              = link_to entry, method: :delete, data: { confirm: 'Are you sure?' } do
-                %span{class:"glyphicon glyphicon-trash"}
+          %td= entry.title
+          %td= entry.author
+          %td= entry.comments
+          %td= entry.publication_date
+          %td= entry.pages
+          %td= entry.category.name
+          %td= entry.data_heavy.yesno.capitalize
+          %td= entry.forecast.yesno.capitalize
+          %td= entry.url
+          %td= link_to 'Show', entry
+          %td= link_to 'Edit', edit_entry_path(entry)
+          %td
+            = link_to entry, method: :delete, data: { confirm: 'Are you sure?' } do
+              %span{class:"glyphicon glyphicon-trash"}
 
 %br
 %p
