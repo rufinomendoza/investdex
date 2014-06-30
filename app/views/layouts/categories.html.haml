@@ -1,0 +1,5 @@
+- content_for :content do
+  = render "layouts/navbar"
+  .container
+    = content_for?(:entries_content) ? yield(:entries_content) : yield
+= render template: "layouts/application"
