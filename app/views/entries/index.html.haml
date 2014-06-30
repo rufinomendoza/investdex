@@ -1,6 +1,14 @@
 = render "entries/navbar"
 %h1 The InvestDEX
-= render "dashboard"
+= render "relevant_results"
+= render "results_by_date"
+
+%br
+%p
+  = link_to new_entry_path do
+    %span{class: "glyphicon glyphicon-plus"}
+    Add New Entry
+
 %hr
 =render "bookmarklet"
 
