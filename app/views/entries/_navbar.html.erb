@@ -15,6 +15,8 @@
     <%= form_tag entries_path, method: :get, class: "navbar-form navbar-left" do %>
       <div class="form-group">
         <%= text_field_tag :query, params[:query] %>
+        <%= check_box_tag(:data_heavy) %>
+        <%= label_tag(:data_heavy) %>
       </div>
       <%= submit_tag "Search", name: nil, class: "btn btn-default" %>
     <% end %>
